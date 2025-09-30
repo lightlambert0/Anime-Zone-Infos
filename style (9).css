@@ -1,0 +1,73 @@
+body{
+  background-color: black;
+  color: white;
+}
+a {
+ color: orange;
+ text-decoration: underline;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b2b2b;
+  padding: 8px 12px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.search-icon {
+  color: white;
+  margin-right: 8px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.search-container {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+  
+
+.anime-container {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+ justify-content: center;
+ padding: 10px;
+}
+
+.anime-card {
+  width: 22%;
+  text-align: center;
+  background-color: #111;
+  border-radius: 8px;
+}
+.anime-card img{
+  width: 100%;
+  border-radius: 8px;
+}
+
+.anime-card p a{
+  color: orange;
+  text-decoration:none;
+}
+
+  
+  
+  
+  
+  
+  
