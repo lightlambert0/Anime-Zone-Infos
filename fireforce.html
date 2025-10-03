@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fire Force - Infos & Notation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: orange;
+    }
+    .rating {
+      margin-top: 20px;
+    }
+    .star {
+      font-size: 30px;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+    .star:hover,
+    .star:hover ~ .star {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔥 Fire Force (En'en no Shouboutai)</h1>
+
+  <h2>Informations Générales</h2>
+  <ul>
+    <li><strong>Auteur :</strong> Atsushi Ōkubo</li>
+    <li><strong>Studio :</strong> David Production</li>
+    <li><strong>Genres :</strong> Action, Surnaturel, Shōnen</li>
+    <li><strong>Date de diffusion :</strong> 2019 - 2022</li>
+    <li><strong>Saisons :</strong> 3 </li>
+  </ul>
+
+  <h2>Synopsis</h2>
+  <p>
+    Dans un monde où des gens prennent feu spontanément et deviennent des "Infernaux", des brigades spéciales appelées Fire Force sont chargées de les neutraliser. Shinra Kusakabe, un jeune soldat surnommé "le Démon", rejoint la 8e brigade pour découvrir la vérité sur la mort de sa famille.
+  </p>
+
+  <h2>Personnages Principaux</h2>
+  <ul>
+    <li>Shinra Kusakabe</li>
+    <li>Arthur Boyle</li>
+    <li>Maki Oze</li>
+    <li>Iris</li>
+    <li>Akitaru Ōbi</li>
+    <li>Takehisa Hinawa</li>
+    <li>Joker</li>
+    <li>Benimaru Shinmon</li>
+  </ul>
+
+  <h2>Arcs Principaux</h2>
+  <ul>
+    <li>Arc de la 5e brigade</li>
+    <li>Arc de Vulcan</li>
+    <li>Arc de l'usine de Nether</li>
+    <li>Arc de l’évangéliste</li>
+    <li>Arc du passé de Shinra</li>
+    <li>Arc final</li>
+  </ul>
+
+  <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <h2>Sites pour regarder</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GY190DKQR/fire-force" target="_blank">Crunchyroll (légal)</a></li>
+    <li><a href="https://www.netflix.com/title/81240822" target="_blank">Netflix (légal)</a></li>
+    <li><a href="https://anime-sama.fr/" target="_blank">Anime Sama (à vos risques)</a></li>
+    <li><a href="https://t.me/fireforcevf" target="_blank">Lien Telegram (VF)</a></li>
+  </ul>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
