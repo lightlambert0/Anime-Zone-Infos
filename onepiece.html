@@ -10,6 +10,17 @@
    h2 { border-bottom: 2px solid; color: #FFA500; padding-bottom: 5px; } 
     ul { padding-left: 20px; }
     a { color: #00bfff;text-decoration: none;}
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: orange;
+}
   </style>
 </head>
 <body>
@@ -85,6 +96,32 @@ href="index.html">Retour à l'accueil</a>
   <li><a href="https://t.me/animevfddl" target="_blank">Telegram – Anime VF DDL</a></li>
   <li><a href="https://www.facebook.com/AnimeStreamingGroups" target="_blank">Facebook – Groupes de streaming d’anime</a></li>
 </ul></div>
-  </div>
+<div class="rating">
+  <h3>Notez cet anime :</h3>
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <p id="selected-rating"></p>
+</div>
+    </div>
+ <script>
+  const stars = document.querySelectorAll(".star");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = star.getAttribute("data-value");
+      result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+      // Optionnel : changer la couleur des étoiles
+      stars.forEach(s => s.style.color = "#ccc");
+      for (let i = 0; i < rating; i++) {
+        stars[i].style.color = "orange";
+      }
+    });
+  });
+</script>
 </body>
 </html>
