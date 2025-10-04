@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dandadan - Infos & Streaming</title>
+  <style>
+    body {
+      background: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h1, h2 {
+      color: #ff4081;
+    }
+    .btn-retour {
+      display: inline-block;
+      margin-bottom: 20px;
+      background: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .rating {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      font-size: 30px;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      color: #555;
+      cursor: pointer;
+    }
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="btn-retour">← Retour à l'accueil</a>
+
+  <h1>👽 Dandadan</h1>
+
+  <h2>Noter cet anime</h2>
+  <form class="rating">
+   <input type="radio" name="note" id="star5"><label for="star5">★</label>
+    <input type="radio" name="note" id="star4"><label for="star4">★</label>
+    <input type="radio" name="note" id="star3"><label for="star3">★</label>
+    <input type="radio" name="note" id="star2"><label for="star2">★</label>
+    <input type="radio" name="note" id="star1"><label for="star1">★</label>
+  </form>
+
+  <h2>Informations Générales</h2>
+  <ul>
+    <li><strong>Mangaka :</strong> Yukinobu Tatsu</li>
+    <li><strong>Studio :</strong> Science SARU</li>
+    <li><strong>Genres :</strong> Action, Comédie, Surnaturel</li>
+    <li><strong>Sortie :</strong> Manga en 2021, anime annoncé pour 2024-25</li>
+  </ul>
+
+  <h2>Synopsis</h2>
+  <p>Momo et Okarun s'aventurent dans le surnaturel : aliens, fantômes et amour improbable. Une histoire folle, drôle et palpitante !</p>
+
+  <h2>Personnages</h2>
+  <ul>
+    <li>Momo Ayase</li>
+    <li>Ken "Okarun" Takakura</li>
+    <li>Turbo Granny</li>
+  </ul>
+
+  <h2>Liens Streaming</h2>
+  <ul>
+    <li><strong>Officiels :</strong>
+      <ul>
+        <li><a href="https://mangaplus.shueisha.co.jp/titles/100179" target="_blank">MANGA Plus</a></li>
+        <li><a href="https://www.crunchyroll.com/" target="_blank">Crunchyroll</a></li>
+      </ul>
+    </li>
+
+   <li><strong>Non officiels :</strong>
+      <ul>
+        <li><a href="https://anime-sama.fr" target="_blank">Anime Sama</a></li>
+        <li><a href="https://vostfree.tv/" target="_blank">VostFree</a></li>
+        <li><a href="https://t.me/+dandadanVF" target="_blank">Telegram</a></li>
+      </ul>
+    </li>
+  </ul>
+<script>
+  const stars = document.querySelectorAll('.rating input');
+  stars.forEach((star) => {
+    star.addEventListener('change', () => {
+      const note = star.id.replace('star', '');
+      alert(`Merci ! Vous avez donné une note de ${note} étoile(s).`);
+    });
+  });
+</script>
+  
+</body>
+</html>
+    
