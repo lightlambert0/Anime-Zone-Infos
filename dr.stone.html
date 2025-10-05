@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Stone - Infos & Liens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .rating {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      display: inline-block;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      color: #ccc;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+    .btn-back {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+
+<a href="index.html">Retour à l'accueil</a>
+
+<h1>Dr. Stone</h1>
+<p><strong>Auteur :</strong> Riichiro Inagaki</p>
+<p><strong>Illustrateur :</strong> Boichi</p>
+<p><strong>Studio :</strong> TMS Entertainment</p>
+<p><strong>Genre :</strong> Aventure, Science, Post-apocalyptique</p>
+<p><strong>Date de sortie :</strong> 2019 (animé)</p>
+
+<h2>Synopsis</h2>
+<p>Des milliers d'années après qu’un mystérieux phénomène a transformé l’humanité en pierre, un jeune prodige scientifique, Senku Ishigami, se réveille dans un monde où la civilisation s’est effondrée. Il décide de reconstruire le monde grâce à la science.</p>
+
+<h2>Personnages principaux</h2>
+<ul>
+  <li>Senku Ishigami</li>
+  <li>Taiju Oki</li>
+  <li>Yuzuriha Ogawa</li>
+  <li>Tsukasa Shishio</li>
+  <li>Chrome</li>
+  <li>Kohaku</li>
+</ul>
+
+<h2>Arcs principaux</h2>
+<ul>
+  <li>Arc de la pétrification</li>
+  <li>Arc du village d'Ishigami</li>
+  <li>Arc de Tsukasa</li>
+  <li>Arc de l'exploration</li>
+  <li>Arc de l'empire scientifique</li>
+</ul>
+
+<h2>Sites pour regarder Dr. Stone</h2>
+<ul>
+  <li><a href="https://www.crunchyroll.com/fr/series/GYEXQKJG6/dr-stone" target="_blank">Crunchyroll (officiel)</a></li>
+<li><a href="https://www.netflix.com/search?q=dr%20stone" target="_blank">Netflix (selon région)</a></li>
+  <li><a href="https://anime-sama.fr/" target="_blank">Anime-sama (non officiel)</a></li>
+  <li><a href="https://voiranime.com/" target="_blank">VoirAnime (non officiel)</a></li>
+  <li><a href="https://t.me/+example_telegram_drstone" target="_blank">Lien Telegram (exemple)</a></li>
+</ul>
+
+<h2>Notez cet anime :</h2>
+<div class="rating">
+  <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+  <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+  <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+  <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+  <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+</div>
+
+<script>
+  const stars = document.querySelectorAll('.rating input');
+  stars.forEach((star) => {
+    star.addEventListener('change', () => {
+      const note = star.value;
+      alert(`Merci ! Vous avez donné une note de ${note} étoile(s) à Dr. Stone.`);
+    });
+  });
+</script>
+
+</body>
+</html>
+  
