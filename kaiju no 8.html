@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaiju No. 8 - Infos & Liens</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #e67e22;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .rating {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      display: inline-block;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      color: #ccc;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+    .btn-back {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 8px 16px;
+      background: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<a href="index.html">Retour à l'accueil</a>
+
+<h1>Kaiju No. 8</h1>
+<p><strong>Auteur :</strong> Naoya Matsumoto</p>
+<p><strong>Studio :</strong> Production I.G / Studio Khara (animation)</p>
+<p><strong>Genre :</strong> Action, Sci-Fi, Monstres</p>
+<p><strong>Date de sortie (anime) :</strong> 2024</p>
+
+<h2>Synopsis</h2>
+<p>Dans un Japon ravagé par des attaques de kaijus (monstres géants), Kafka Hibino, un nettoyeur de cadavres de kaijus, se retrouve fusionné avec un kaiju. Il décide alors d'intégrer les Forces de Défense pour combattre les monstres... en devenant lui-même Kaiju No. 8.</p>
+
+<h2>Personnages principaux</h2>
+<ul>
+  <li>Kafka Hibino (Kaiju No. 8)</li>
+  <li>Mina Ashiro</li>
+  <li>Leno Ichikawa</li>
+  <li>Kikoru Shinomiya</li>
+  <li>Soshiro Hoshina</li>
+</ul>
+
+<h2>Arcs principaux</h2>
+<ul>
+  <li>Arc de l'enrôlement</li>
+  <li>Arc de l’examen</li>
+  <li>Arc de la Défense Anti-Kaiju</li>
+  <li>Arc de l’identité révélée</li>
+</ul>
+
+<h2>Sites pour regarder Kaiju No. 8</h2>
+<ul>
+  <li><a href="https://www.crunchyroll.com/fr/series/GG5H5XQ35/kaiju-no-8" target="_blank">Crunchyroll (officiel)</a></li>
+  <li><a href="https://anime-sama.fr/" target="_blank">Anime-sama (non officiel)</a></li>
+  <li><a href="https://voiranime.com/" target="_blank">VoirAnime (non officiel)</a></li>
+  <li><a href="https://t.me/+exemple_kaiju8_telegram" target="_blank">Lien Telegram (exemple)</a></li>
+</ul>
+
+<h2>Notez cet anime :</h2>
+<div class="rating">
+  <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+  <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+  <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+  <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+  <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+</div>
+
+<script>
+  const stars = document.querySelectorAll('.rating input');
+  stars.forEach((star) => {
+    star.addEventListener('change', () => {
+      const note = star.value;
+      alert(`Merci ! Vous avez donné une note de ${note} étoile(s) à Kaiju No. 8.`);
+    });
+  });
+</script>
+
+</body>
+</html>
