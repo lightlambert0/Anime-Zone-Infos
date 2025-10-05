@@ -10,7 +10,9 @@ const animePages = {
   "kaiju no 8":
 "kaiju no 8.html",
   "dr.stone":
-"dr.stone.html"
+"dr.stone.html",
+  "one punch man":
+     "onepunchman.html"
 };
 
 function rechercherAnime() {
