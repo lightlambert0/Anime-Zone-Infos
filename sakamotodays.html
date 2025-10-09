@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sakamoto Days - Fiche Manga</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f0f0f0; }
+    h1, h2 { color: #2c3e50; }
+    ul { line-height: 1.6; }
+    a { color: #3498db; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">Retour à l'accueil</a>
+
+  <h1>Sakamoto Days</h1>
+
+  <div>
+    <strong>Auteur :</strong> Yuto Suzuki<br>
+    <strong>Genres :</strong> Action, Comédie, Shonen<br>
+    <strong>Statut :</strong> En cours<br>
+    <strong>Première publication :</strong> 2020 (Weekly Shonen Jump)<br>
+  </div>
+
+  <div>
+    <h2>Synopsis</h2>
+    <p>Taro Sakamoto était un légendaire tueur à gages craint de tous. Après être tombé amoureux, il s'est rangé et mène désormais une vie paisible comme gérant d'une supérette. Mais son passé le rattrape, et Sakamoto reprend du service… à sa façon.</p>
+  </div>
+
+  <div>
+    <h2>Personnages Principaux</h2>
+    <ul>
+      <li>Taro Sakamoto</li>
+      <li>Shin (télépathe)</li>
+      <li>Lu Xiaotang</li>
+      <li>Slur (antagoniste principal)</li>
+      <li>Heisuke</li>
+    </ul>
+    </div>
+
+  <div>
+    <h2>Où lire / regarder</h2>
+    <ul>
+      <li><a href="https://mangaplus.shueisha.co.jp/titles/100152">Manga Plus (officiel)</a></li>
+      <li><a href="https://www.crunchyroll.com/fr">Crunchyroll (anime en préparation)</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Sites non officiels (à vos risques)</h2>
+    <ul>
+      <li><a href="https://anime-sama.fr">Anime Sama</a></li>
+      <li><a href="https://voiranime.one">Voireanime</a></li>
+      <li><a href="https://t.me/anime_fr_links">Lien Telegram</a></li>
+    </ul>
+  </div>
+
+  <div class="rating">
+    <h2>Notez ce manga :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+  stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
