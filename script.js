@@ -12,7 +12,9 @@ const animePages = {
   "dr.stone":
 "dr.stone.html",
   "one punch man":
-     "onepunchman.html"
+     "onepunchman.html",
+"jujutsu kaisen":
+"jujutsukaisen.html"
 };
 
 function rechercherAnime() {
