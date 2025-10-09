@@ -18,7 +18,9 @@ const animePages = {
   "sakamoto days":
   "sakamotodays.html",
   "the seven deadly seens":
-   "thesevendeadlyseens.html"
+   "thesevendeadlyseens.html",
+  "the rising of the shield hero":
+  "therisingoftheshieldhero.html"
 };
 
 function rechercherAnime() {
