@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>The Seven Deadly Sins - Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    h1, h2 { color: #2c3e50; }
+    a { color: #3498db; }
+    ul { line-height: 1.6; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+  </style>
+</head>
+<body>
+
+<a href="index.html">Retour à l'accueil</a>
+
+<h1>The Seven Deadly Sins (Nanatsu no Taizai)</h1>
+
+<div>
+  <strong>Auteur :</strong> Nakaba Suzuki<br>
+  <strong>Genres :</strong> Action, Fantastique, Aventure, Shonen<br>
+  <strong>Statut :</strong> Terminé (Manga), Anime terminé, spin-offs en cours<br>
+  <strong>Publication :</strong> 2012 - 2020 (manga)<br>
+</div>
+
+<h2>Synopsis</h2>
+<p>Dans un monde semblable à l’Europe médiévale, les Chevaliers Sacrés du royaume de Liones commettent un coup d’État. La princesse Elizabeth part alors à la recherche des légendaires "Seven Deadly Sins", un groupe d’anciens chevaliers accusés de trahison, pour l’aider à reprendre son royaume.</p>
+
+  <h2>Personnages Principaux</h2>
+<ul>
+  <li>Meliodas – Chef des Seven Deadly Sins, Péché de la Colère</li>
+  <li>Elizabeth Liones – Princesse de Liones</li>
+  <li>Diane – Péché de l’Envie, Géante</li>
+  <li>Ban – Péché de l’Avarice, immortel</li>
+  <li>King – Péché de la Paresse, roi des fées</li>
+  <li>Gowther – Péché de la Luxure, poupée magique</li>
+  <li>Merlin – Péché de la Gourmandise, sorcière</li>
+  <li>Escanor – Péché de l’Orgueil, l’homme le plus fort</li>
+</ul>
+
+<h2>Arcs Principaux</h2>
+<ul>
+  <li>Arc des Chevaliers Sacrés</li>
+  <li>Arc du Royaume de Liones</li>
+  <li>Arc des Dix Commandements</li>
+  <li>Arc de la Guerre Sainte</li>
+  <li>Arc final – Le Roi des Démons</li>
+</ul>
+
+<h2>Où regarder / lire</h2>
+<ul>
+  <li><a href="https://www.netflix.com/fr/title/80050063">Netflix (anime officiel)</a></li>
+  <li><a href="https://mangaplus.shueisha.co.jp">Manga Plus (lecture manga)</a></li>
+</ul>
+
+<h2>Sites non officiels (à vos risques)</h2>
+<ul>
+  <li><a href="https://anime-sama.fr">Anime Sama</a></li>
+  <li><a href="https://voiranime.one">Voireanime</a></li>
+  <li><a href="https://t.me/anime_fr_links">Lien Telegram</a></li>
+</ul>
+
+<h2>Notez cet anime :</h2>
+<div class="rating">
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <p id="selected-rating"></p>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".star");
+  const result = document.getElementById("selected-rating");
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = star.getAttribute("data-value");
+      result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+      stars.forEach(s => s.style.color = "#ccc");
+      for (let i = 0; i < rating; i++) {
+        stars[i].style.color = "orange";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
