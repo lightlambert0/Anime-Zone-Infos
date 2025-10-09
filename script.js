@@ -16,7 +16,9 @@ const animePages = {
 "jujutsu kaisen":
 "jujutsukaisen.html",
   "sakamoto days":
-  "sakamotodays.html"
+  "sakamotodays.html",
+  "the seven deadly seens":
+   "thesevendeadlyseens.html"
 };
 
 function rechercherAnime() {
