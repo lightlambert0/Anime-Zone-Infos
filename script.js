@@ -14,7 +14,9 @@ const animePages = {
   "one punch man":
      "onepunchman.html",
 "jujutsu kaisen":
-"jujutsukaisen.html"
+"jujutsukaisen.html",
+  "sakamoto days":
+  "sakamotodays.html"
 };
 
 function rechercherAnime() {
