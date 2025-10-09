@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>The Rising of the Shield Hero - Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    h1, h2 { color: #2c3e50; }
+    a { color: #3498db; }
+    ul { line-height: 1.6; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+  </style>
+</head>
+<body>
+
+<a href="index.html">Retour à l'accueil</a>
+
+<h1>The Rising of the Shield Hero (盾の勇者の成り上がり)</h1>
+
+<div>
+  <strong>Auteur :</strong> Aneko Yusagi (roman), Aiya Kyuu (manga)<br>
+  <strong>Genres :</strong> Action, Aventure, Isekai, Drame, Fantastique<br>
+  <strong>Statut :</strong> En cours (anime & manga)<br>
+  <strong>Première diffusion :</strong> Janvier 2019<br>
+</div>
+
+<h2>Synopsis</h2>
+<p>Naofumi Iwatani est transporté dans un autre monde en tant que l’un des quatre héros légendaires : le Héros au Bouclier. Mais rapidement trahi, accusé à tort, et rejeté, il doit se battre seul pour devenir plus fort et sauver ce monde, accompagné d’alliés qu’il rencontre sur sa route.</p>
+
+<h2>Personnages Principaux</h2>
+<ul>
+ <li>Naofumi Iwatani – Héros du Bouclier</li>
+  <li>Raphtalia – Demi-humaine maniant l’épée</li>
+  <li>Filo – Reine des Filolials</li>
+  <li>Melty – Princesse du royaume de Melromarc</li>
+  <li>Ren, Itsuki, Motoyasu – Les autres héros (Épée, Arc, Lance)</li>
+</ul>
+
+<h2>Arcs Majeurs</h2>
+<ul>
+  <li>Invocation des 4 héros</li>
+  <li>Accusation et rejet</li>
+  <li>Rébellion contre le royaume</li>
+  <li>Vagues de calamité</li>
+  <li>Autres mondes et vérités cachées</li>
+</ul>
+
+<h2>Où regarder / lire légalement</h2>
+<ul>
+  <li><a href="https://www.crunchyroll.com/fr/series/G63K0Z5E6/the-rising-of-the-shield-hero">Crunchyroll</a></li>
+  <li><a href="https://mangaplus.shueisha.co.jp">Manga Plus</a></li>
+</ul>
+
+<h2>Sites non officiels (à vos risques)</h2>
+<ul>
+  <li><a href="https://anime-sama.fr">Anime Sama</a></li>
+  <li><a href="https://voiranime.one">Voireanime</a></li>
+  <li><a href="https://t.me/anime_fr_links">Lien Telegram</a></li>
+</ul>
+
+<h2>Notez cet anime :</h2>
+<div class="rating">
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <p id="selected-rating"></p>
+</div> 
+
+  <script>
+  const stars = document.querySelectorAll(".star");
+  const result = document.getElementById("selected-rating");
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = star.getAttribute("data-value");
+      result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+      stars.forEach(s => s.style.color = "#ccc");
+      for (let i = 0; i < rating; i++) {
+        stars[i].style.color = "orange";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
