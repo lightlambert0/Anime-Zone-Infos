@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fairy Tail — Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; padding: 20px; }
+    h1 { color: #d32f2f; }
+    a { color: #1565c0; text-decoration: none; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+    .rating span.active { color: orange; }
+  </style>
+</head>
+<body>
+
+  <a href="index.html"> Retour à l’accueil</a>
+
+  <h1>Fairy Tail (フェアリーテイル)</h1>
+  <p><strong>Auteur :</strong> Hiro Mashima [1] </p>
+  <p><strong>Genre :</strong> Aventure, Fantasy, Magie [1] </p>
+  <p><strong>Première publication :</strong> 2 août 2006 [1] </p>
+  <p><strong>Volumes :</strong> 63 volumes [1] </p>
+  <p><strong>Épisodes :</strong> 328 épisodes (trois séries) [1] </p>
+
+  <h2>Synopsis</h2>
+  <p>
+    Fairy Tail suit les aventures du mage de feu *Natsu Dragneel* et son chat parlant *Happy*, lorsqu’ils rencontrent *Lucy Heartfilia*, une mage des esprits célestes. Lucy aspire à rejoindre la guilde Fairy Tail. Ensemble, ils réalisent des quêtes, affrontent des ennemis puissants, et protègent leur guilde des menaces grandissantes.  [2]
+  </p>
+  <h2>Personnages Principaux</h2>
+  <ul>
+    <li>Natsu Dragneel</li>
+    <li>Lucy Heartfilia</li>
+    <li>Happy</li>
+    <li>Gray Fullbuster</li>
+    <li>Erza Scarlet</li>
+  </ul>
+
+  <h2>Adaptations & Médias liés</h2>
+  <ul>
+    <li>Séries animées : trois saisons diffusées entre 2009 et 2019 [1] </li>
+    <li>Films : *Fairy Tail the Movie: Phoenix Priestess*, *Fairy Tail: Dragon Cry* [1] </li>
+    <li>Jeux vidéo : *Fairy Tail* (2020), *Fairy Tail 2* (2024) [3] </li>
+  </ul>
+
+  <h2>Notez cet anime</h2>
+  <div class="rating">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné ${rating} étoile(s).`;
+        stars.forEach(s => s.classList.remove("active"));
+        for (let i = 0; i < rating; i++) {
+         stars[i].classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
