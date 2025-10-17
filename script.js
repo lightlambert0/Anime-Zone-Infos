@@ -21,9 +21,9 @@ const animePages = {
    "thesevendeadlyseens.html",
   "the rising of the shield hero":
   "therisingoftheshieldhero.html",
-  "chainsawman":
+  "chainsaw man":
     "chainsawman.html",
- "myheroacademia":
+ "my hero academia":
 "myheroacademia.html"
 };
 
