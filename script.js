@@ -28,7 +28,7 @@ const animePages = {
   "black clover":
    "blackclover.html",
 "fairy tail":
-"fairytail.html"
+"fairytail.html" 
 };
 
 function rechercherAnime() {
