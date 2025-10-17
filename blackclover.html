@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Black Clover — Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; padding: 20px; }
+    h1 { color: #2e7d32; }
+    a { color: #1565c0; text-decoration: none; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+    .rating span.active { color: orange; }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">Retour à l’accueil</a>
+
+  <h1>Black Clover (ブラッククローバー)</h1>
+  <p><strong>Auteur :</strong> Yūki Tabata [1] </p>
+  <p><strong>Genre :</strong> Action, Fantaisie, Aventure [2] </p>
+  <p><strong>Publication :</strong> Depuis le 16 février 2015 [1] </p>
+  <p><strong>Volumes :</strong> 37 volumes (à ce jour) [1] </p>
+
+  <h2>Synopsis</h2>
+  <p>
+    Dans un monde où la magie est omniprésente, Asta et Yuno sont deux orphelins élevés ensemble.  
+    Yuno possède des pouvoirs magiques exceptionnels, tandis qu’Asta est né sans aucun pouvoir.  
+    Malgré cela, il rêve de devenir le Roi Mage — le plus puissant des magiciens.
+    Pour ce faire, il lutte, s’entraîne, et affronte de nombreux ennemis, avec l’aide de ses compagnons des Black Bulls.  [2]
+  </p>
+
+  <h2>Adaptation anime / film</h2>
+  <ul>
+    <li>Série animée : 170 épisodes diffusés entre 2017 et 2021 [3] </li>
+    <li>Film : *Black Clover: Sword of the Wizard King* sorti en 2023 [4] </li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Asta</li>
+    <li>Yuno</li>
+    <li>Noelle Silva</li>
+    <li>Yami Sukehiro</li>
+    <li>Lucius Zogratis</li>
+  </ul>
+
+  <h2>Notez cet anime</h2>
+  <div class="rating">
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné ${rating} étoile(s).`;
+        stars.forEach(s => s.classList.remove("active"));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
