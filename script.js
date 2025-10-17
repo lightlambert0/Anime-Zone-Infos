@@ -20,7 +20,11 @@ const animePages = {
   "the seven deadly seens":
    "thesevendeadlyseens.html",
   "the rising of the shield hero":
-  "therisingoftheshieldhero.html"
+  "therisingoftheshieldhero.html",
+  "chainsawman":
+    "chainsawman.html",
+ "myheroacademia":
+"myheroacademia.html"
 };
 
 function rechercherAnime() {
