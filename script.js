@@ -24,7 +24,11 @@ const animePages = {
   "chainsaw man":
     "chainsawman.html",
  "my hero academia":
-"myheroacademia.html"
+"myheroacademia.html",
+  "black clover":
+   "blackclover.html",
+"fairy tail":
+"fairytail.html"
 };
 
 function rechercherAnime() {
