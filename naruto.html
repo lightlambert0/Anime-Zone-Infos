@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Naruto - Anime Zone</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .anime-box { background: white; padding: 20px; border-radius: 8px; }
+    h1 { color: #ff9900; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+    .rating span.active { color: orange; }
+  </style>
+</head>
+<body>
+<a href="index.html">Retour à l'accueil</a>
+<div class="anime-box">
+  <h1>Naruto</h1>
+  <p><strong>Auteur :</strong> Masashi Kishimoto</p>
+  <p><strong>Genre :</strong> Action, Aventure, Ninja</p>
+  <p><strong>Statut :</strong> Terminé</p>
+  <p><strong>Épisodes :</strong> 220 (2002–2007)</p>
+  <p><strong>Synopsis :</strong> Naruto Uzumaki, jeune ninja rejeté par son village à cause du démon Kyûbi scellé en lui, rêve de devenir Hokage. Avec ses amis Sasuke et Sakura, il affronte de nombreuses épreuves.</p>
+
+  <h3>Personnages principaux :</h3>
+  <ul>
+    <li>Naruto Uzumaki</li>
+    <li>Sasuke Uchiha</li>
+    <li>Sakura Haruno</li>
+    <li>Kakashi Hatake</li>
+  </ul>
+
+  <h3>Où regarder :</h3>
+  <ul>
+    <li>Crunchyroll</li>
+    <li>ADN</li>
+    <li>Netflix</li>
+    <li>Autres : Anime-sama, Voiranime (non officiels)</li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".rating span");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach((star, i) => {
+    star.addEventListener("click", () => {
+      stars.forEach(s => s.classList.remove("active"));
+      for (let j = 0; j <= i; j++) {
+        stars[j].classList.add("active");
+      }
+      result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
+    });
+  });
+</script>
+
+</body>
+</html>
