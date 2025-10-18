@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Death Note - Anime Zone</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    .anime-box { background: white; padding: 20px; border-radius: 8px; }
+    h1 { color: #2c3e50; }
+    ul { padding-left: 20px; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+    .rating span.active { color: orange; }
+    a { text-decoration: none; color: #2980b9; }
+  </style>
+</head>
+<body>
+
+<a href="index.html">Retour à l'accueil</a>
+
+<div class="anime-box">
+  <h1>Death Note</h1>
+  <p><strong>Auteur :</strong> Tsugumi Ohba</p>
+  <p><strong>Illustrateur :</strong> Takeshi Obata</p>
+  <p><strong>Genres :</strong> Thriller, Psychologique, Mystère, Surnaturel</p>
+  <p><strong>Nombre d'épisodes :</strong> 37</p>
+  <p><strong>Studio :</strong> Madhouse</p>
+  <p><strong>Diffusion :</strong> 2006 - 2007</p>
+
+  <h3>Synopsis :</h3>
+  <p>Light Yagami, un lycéen brillant, découvre un cahier surnaturel appelé "Death Note". Quiconque voit son nom écrit dans ce cahier meurt. Light décide d’utiliser ce pouvoir pour créer un monde sans crime, mais un détective mystérieux nommé "L" se met à sa poursuite.</p>
+
+  <h3>Personnages principaux :</h3>
+  <ul>
+    <li>Light Yagami</li>
+    <li>L</li>
+    <li>Ryuk</li>
+    <li>Misa Amane</li>
+    <li>Near</li>
+    <li>Mello</li>
+  </ul>
+
+  <h3>Où regarder :</h3>
+  <ul>
+    <li>Netflix (officiel)</li>
+    <li>Crunchyroll</li>
+    <li>Voiranime, Anime Sama (non officiels)</li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".rating span");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach((star, i) => {
+    star.addEventListener("click", () => {
+      stars.forEach(s => s.classList.remove("active"));
+      for (let j = 0; j <= i; j++) {
+        stars[j].classList.add("active");
+      }
+     result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
+    });
+  });
+</script>
+
+</body>
+</html> 
