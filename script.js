@@ -28,7 +28,17 @@ const animePages = {
   "black clover":
    "blackclover.html",
 "fairy tail":
-"fairytail.html" 
+"fairytail.html",
+  "attaque des titants":
+   "attaquedestitants.html",
+  "shangri-la frontier":
+    "shangrilafrontier.html",
+  "naruto":
+    "naruto.html",
+  "to be hero x":
+    "tobeherox.html",
+  "food wars":
+    "foodwars.html"
 };
 
 function rechercherAnime() {
