@@ -38,7 +38,7 @@ const animePages = {
   "to be hero x":
     "tobeherox.html",
   "food wars":
-    "foodwars.html"
+    "foodwar.html"
 };
 
 function rechercherAnime() {
