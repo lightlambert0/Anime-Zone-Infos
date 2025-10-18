@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Shangri‑La Frontier — Fiche Anime/Manga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    a {
+      color: #1565c0;
+      text-decoration: none;
+    }
+    .rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating span.active {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html"> Retour à l’accueil</a>
+
+  <h1>Shangri‑La Frontier (シャングリラ・フロンティア ～クソゲーハンター、神ゲーに挑まんとす～)</h1>
+  <p><strong>Auteur :</strong> Katarina (scénario) & Ryōsuke Fuji (illustration) [1] </p>
+  <p><strong>Genre :</strong> Action, Aventure, Fantaisie, Jeu vidéo [1] </p>
+  <p><strong>Publication Manga :</strong> Depuis le 15 juillet 2020 dans le Weekly Shōnen Magazine (Kodansha) [2] </p>
+  <p><strong>Volumes :</strong> 24 volumes (à date oct. 2025) [3] </p>
+
+  <h2>Synopsis</h2>
+  <p> Rakurō Hizutome adore jouer à des « trash games » (jeux foireux bourrés de bugs).  
+    Après avoir maîtrisé ces titres, il décide de tester le meilleur jeu VR du moment : « Shangri‑La Frontier », un monde virtuel ultra‑populaire.  
+    Il entre sous l’avatar Sunraku, et tous ses talents de trash gamer vont lui servir dans ce monde où défis et ennemis monstrueux l’attendent. [3]
+  </p>
+
+  <h2>Adaptation animée</h2>
+  <ul>
+    <li>Série TV diffusée dès octobre 2023, produite par le studio C2C. [3] </li>
+    <li>Licenciée par Crunchyroll en Amérique du Nord. [3] </li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Sunraku / Rakurō Hizutome</li>
+    <li>Psyger‑0 / Rei Saiga</li>
+    <li>Arthur Pencilgon / Towa Amane</li>
+    <li>OiKatzo / Kei Uomi</li>
+    <li>Emul</li>
+  </ul>
+
+  <h2>Notez cette œuvre</h2>
+  <div class="rating">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné ${rating} étoile(s).`;
+        stars.forEach(s => s.classList.remove("active"));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
