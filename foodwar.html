@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Wars! (Shokugeki no Soma)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+      padding: 20px;
+    }
+    h1 {
+      color: #e53935;
+    }
+    .rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating span.active {
+      color: orange;
+    }
+    a {
+      color: #d32f2f;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">Retour à l’accueil</a>
+
+  <h1>Food Wars! (Shokugeki no Soma)</h1>
+  <p><strong>Titre japonais :</strong> 食戟のソーマ (Shokugeki no Sōma)</p>
+  <p><strong>Auteurs :</strong> Yūto Tsukuda (scénario), Shun Saeki (dessins)</p>
+  <p><strong>Genre :</strong> Cuisine, Comédie, École, Compétition</p>
+  <p><strong>Manga :</strong> Publié entre 2012 et 2019 (36 tomes)</p>
+  <p><strong>Anime :</strong> 5 saisons (2015 - 2020), par le studio J.C. Staff</p>
+
+  <h2>Synopsis</h2>
+  <p>Sōma Yukihira rêve de devenir un chef surpassant son père. Il entre dans la prestigieuse académie culinaire Tōtsuki, réputée pour ses compétitions culinaires appelées <em>shokugeki</em>. Là, il affronte d’autres jeunes prodiges dans des duels de cuisine intenses et créatifs.</p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Sōma Yukihira</li>
+    <li>Erina Nakiri</li>
+    <li>Megumi Tadokoro</li>
+    <li>Takumi Aldini</li>
+    <li>Isshiki Satoshi</li>
+    <li>Joichiro Yukihira (père)</li>
+  </ul>
+
+  <h2>Où regarder ?</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/G6NQ5DWZ6/food-wars" target="_blank">Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=food%20wars" target="_blank">Netflix</a> (selon région)</li>
+  </ul>
+
+  <h2>Notez cette œuvre</h2>
+  <div class="rating">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné ${rating} étoile(s).`;
+        stars.forEach(s => s.classList.remove("active"));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
