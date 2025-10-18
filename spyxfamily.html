@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Spy × Family - Infos</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f8f8f8; padding: 20px; }
+    h1 { color: #2c3e50; }
+    h2 { color: #34495e; }
+    ul { padding-left: 20px; }
+    .container { background: #fff; padding: 20px; border-radius: 8px; max-width: 800px; margin: auto; }
+    a { color: #3498db; }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l’accueil</a>
+  <div class="container">
+    <h1>Spy × Family</h1>
+
+    <h2>Informations générales</h2>
+    <ul>
+      <li><strong>Auteur :</strong> Tatsuya Endo</li>
+      <li><strong>Genres :</strong> Action, Comédie, Espionnage, Slice of Life</li>
+      <li><strong>Studio :</strong> Wit Studio & CloverWorks</li>
+      <li><strong>Début du manga :</strong> 2019</li>
+      <li><strong>Début de l’anime :</strong> Avril 2022</li>
+      <li><strong>Statut :</strong> En cours</li>
+    </ul>
+
+    <h2>Synopsis</h2>
+    <p>
+      Pour préserver la paix entre deux nations, l’espion Twilight doit fonder une fausse famille pour infiltrer une école.
+      Il adopte Anya, une petite fille télépathe, et épouse Yor, une tueuse à gages. Aucun ne connaît la vraie identité des autres.
+    </p>
+
+    <h2>Personnages Principaux</h2>
+    <ul>
+      <li><strong>Loid Forger (Twilight)</strong> – Espion, père de façade</li>
+      <li><strong>Anya Forger</strong> – Enfant télépathe</li>
+      <li><strong>Yor Forger</strong> – Tueuse à gages</li>
+      <li><strong>Bond</strong> – Chien capable de voir l’avenir</li>
+    </ul>
+
+    <h2>Saisons et film</h2>
+    <ul>
+      <li>Saison 1 (2022)</li>
+      <li>Saison 2 (2023)</li>
+      <li>Film : <em>Spy × Family Code: White</em> (2023)</li>
+    </ul>
+
+    <h2>Regarder en streaming</h2>
+    <ul>
+      <li><a href="https://www.crunchyroll.com/fr/series/G4PH0WEWE/spy-x-family" target="_blank">Crunchyroll (officiel)</a></li>
+      <li><a href="https://www.netflix.com/search?q=spy%20x%20family" target="_blank">Netflix (officiel)</a></li>
+      <li><a href="https://anime-sama.fr/catalogue/spy-x-family/" target="_blank">Anime-sama (non officiel)</a></li>
+      <li><a href="https://voiranime.com/" target="_blank">Voiranime (non officiel)</a></li>
+    </ul>
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".rating span");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach((star, i) => {
+    star.addEventListener("click", () => {
+      stars.forEach(s => s.classList.remove("active"));
+      for (let j = 0; j <= i; j++) {
+        stars[j].classList.add("active");
+      } 
+
+      result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
+    });
+  });
+</script>
+
+</body>
+</html>
+                          
