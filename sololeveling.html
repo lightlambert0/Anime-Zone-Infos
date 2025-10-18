@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Solo Leveling - Anime Zone</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .anime-box { background: white; padding: 20px; border-radius: 8px; }
+    h1 { color: #3498db; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+    .rating span.active { color: orange; }
+    a { color: #2c3e50; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<a href="index.html">← Retour à l'accueil</a>
+
+<div class="anime-box">
+  <h1>Solo Leveling</h1>
+  <p><strong>Auteur :</strong> Chugong (roman), Dubu (illustrations du webtoon)</p>
+  <p><strong>Genre :</strong> Action, Fantastique, RPG, Aventure</p>
+  <p><strong>Statut :</strong> En cours (anime) / Terminé (webtoon)</p>
+  <p><strong>Saison 1 de l'anime :</strong> 12 épisodes (janvier - mars 2024)</p>
+  <p><strong>Studio :</strong> A-1 Pictures</p>
+
+  <h3>Synopsis :</h3>
+ <p>Dans un monde où des portails apparaissent pour connecter la Terre à des dimensions peuplées de monstres, certains humains appelés chasseurs les affrontent. Sung Jin-Woo, un chasseur de rang E considéré comme le plus faible, va voir sa vie changer après avoir survécu à un donjon double et obtenu le pouvoir de "monter de niveau" comme dans un RPG.</p>
+
+  <h3>Personnages principaux :</h3>
+  <ul>
+    <li>Sung Jin-Woo</li>
+    <li>Cha Hae-In</li>
+    <li>Go Gun-Hee</li>
+    <li>Yoo Jin-Ho</li>
+    <li>Antares (Roi des Dragons)</li>
+  </ul>
+
+  <h3>Où regarder :</h3>
+  <ul>
+    <li>Crunchyroll (officiel)</li>
+    <li>Anime Sama, Voiranime (non officiels)</li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".rating span");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach((star, i) => {
+    star.addEventListener("click", () => {
+      stars.forEach(s => s.classList.remove("active"));
+      for (let j = 0; j <= i; j++) {
+        stars[j].classList.add("active");
+      }
+      result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
+    });
+  });
+</script>
+
+</body>
+</html>
