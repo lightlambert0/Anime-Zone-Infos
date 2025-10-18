@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>L'Attaque des Titans — Fiche Anime</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      color: #222;
+      padding: 20px;
+    }
+    h1 {
+      color: #c62828;
+    }
+    a {
+      color: #1565c0;
+      text-decoration: none;
+    }
+    .rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating span.active {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html"> Retour à l’accueil</a>
+
+  <h1>L’Attaque des Titans (Shingeki no Kyojin)</h1>
+  <p><strong>Auteur :</strong> Hajime Isayama</p>
+  <p><strong>Genre :</strong> Action, Drame, Fantastique, Post-apocalyptique</p>
+  <p><strong>Manga :</strong> Publié de 2009 à 2021 — 34 tomes</p>
+  <p><strong>Anime :</strong> 4 saisons (2013 – 2023), produites par Wit Studio et MAPPA</p>
+
+  <h2>Synopsis</h2>
+  <p>
+    Dans un monde ravagé par des créatures géantes appelées Titans, l’humanité vit enfermée derrière d'immenses murs.
+    Eren Jäger, témoin de la destruction de sa ville par un Titan colossal, décide de rejoindre l’armée pour les combattre.  
+    Un long combat pour la liberté et la vérité commence.
+  </p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Eren Jäger</li>
+    <li>Mikasa Ackerman</li>
+    <li>Armin Arlert</li>
+    <li>Levi Ackerman</li>
+    <li>Erwin Smith</li>
+    <li>Reiner Braun</li>
+  </ul>
+
+  <h2>Adaptations</h2>
+  <ul>
+    <li>Manga : 34 volumes (2009 – 2021)</li>
+    <li>Anime : 4 saisons (dernière partie diffusée en 2023)</li>
+    <li>Films récapitulatifs et live-action</li>
+    <li>Jeux vidéo (PS4, PC, Nintendo Switch)</li>
+  </ul>
+
+  <h2>Où regarder</h2>
+  <ul>
+    <li>Crunchyroll</li>
+    <li>Wakanim (ancien)</li>
+    <li>Netflix (selon pays)</li>
+    <li>Anime Digital Network</li>
+  </ul>
+
+  <h2>Notez cette œuvre</h2>
+  <div class="rating">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné ${rating} étoile(s).`;
+        stars.forEach(s => s.classList.remove("active"));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
