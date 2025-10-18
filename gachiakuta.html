@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gachiakuta - Infos</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .container { background: #fff; padding: 20px; border-radius: 10px; max-width: 800px; margin: auto; }
+    h1, h2 { color: #333; }
+    ul { padding-left: 20px; }
+    a { color: #3498db; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l’accueil</a>
+    <div class="container">
+    <h1>Gachiakuta</h1>
+
+    <h2>Informations Générales</h2>
+    <ul>
+      <li><strong>Auteur :</strong> Kei Urana</li>
+      <li><strong>Assistant Design :</strong> Kodansha / Atsushi Ohkubo (Fire Force)</li>
+      <li><strong>Genre :</strong> Action, Drame, Fantastique</li>
+      <li><strong>Manga :</strong> Oui (en cours)</li>
+      <li><strong>Anime :</strong> Prévu pour 2025 (par Studio Bones)</li>
+      <li><strong>Statut :</strong> En cours</li>
+    </ul>
+
+    <h2>Synopsis</h2>
+    <p>
+      Rudo vit dans les bas-fonds d’une société divisée. Accusé à tort d’un crime, il est jeté dans un monde de déchets nommé "Abyss".
+     Il y découvre une nouvelle réalité où des combattants manipulent les ordures comme armes. Sa quête de vérité et de vengeance commence.
+    </p>
+
+    <h2>Personnages Principaux</h2>
+    <ul>
+      <li><strong>Rudo</strong> – Héros principal, injustement accusé</li>
+      <li><strong>Engine</strong> – Nettoyeur de l’Abyss</li>
+      <li><strong>Chimera</strong> – Êtres modifiés dans l’Abyss</li>
+    </ul>
+
+    <h2>Lire le manga</h2>
+    <ul>
+      <li><a href="https://mangaplus.shueisha.co.jp/titles/200211" target="_blank">MANGA Plus (officiel - anglais)</a></li>
+      <li><a href="https://mangalib.me/gachiakuta" target="_blank">Sites non officiels (VF)</a></li>
+    </ul>
+    <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".rating span");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach((star, i) => {
+    star.addEventListener("click", () => {
+      stars.forEach(s => s.classList.remove("active"));
+      for (let j = 0; j <= i; j++) {
+        stars[j].classList.add("active");
+      } 
+
+      result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
+    });
+  });
+</script>
+
+</body>
+</html>
