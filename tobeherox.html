@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>To Be Hero X — Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; padding: 20px; }
+    h1 { color: #1a237e; }
+    a { color: #1565c0; text-decoration: none; }
+    .rating span { font-size: 24px; cursor: pointer; color: #ccc; }
+    .rating span.active { color: orange; }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">← Retour à l’accueil</a>
+
+  <h1>To Be Hero X (凸变英雄X)</h1>
+  <p><strong>Créateur / Réalisateur :</strong> Li Haolin [1] </p>
+  <p><strong>Genre :</strong> Action, Super‑héros, Science‑fiction [2] </p>
+  <p><strong>Diffusion :</strong> 6 avril 2025 – 14 septembre 2025 (24 épisodes) [3] </p>
+
+  <h2>Synopsis</h2>
+  <p>
+    Dans un monde où la “confiance” du public transforme une personne ordinaire en super‑héros, tout repose sur la croyance qu’on place en eux.  
+    Si les gens croient qu’un homme peut voler — alors il volera. Mais si cette confiance s’érode, ses pouvoirs disparaîtront.  
+    Chaque deux ans, les héros les mieux classés participent à un tournoi pour déterminer qui occupera la première place : “X”.  
+    
+  </p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>X — Rang n°1 [4] </li>
+    <li>Queen — Rang n°2 [4] </li>
+    <li>Dragon Boy — Rang n°3 [4] </li>
+    <li>Ghostblade — Rang n°4 [4] </li>
+    <li>The Johnnies — Rang n°5 [5] </li>
+  </ul>
+
+  <h2>Notez cet anime</h2>
+  <div class="rating">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné ${rating} étoile(s).`;
+        stars.forEach(s => s.classList.remove("active"));
+        for (let i = 0; i < rating; i++) {
+          stars[i].classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
