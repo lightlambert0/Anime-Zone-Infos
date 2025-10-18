@@ -31,7 +31,7 @@ const animePages = {
 "fairytail.html",
   "attaque des titants":
    "attaquedestitants.html",
-  "shangri la frontier":
+  "shangri-la frontier":
     "shangrilafrontier.html",
   "naruto":
     "naruto.html",
