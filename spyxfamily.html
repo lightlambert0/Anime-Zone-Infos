@@ -67,21 +67,22 @@
   </div>
 </div>
 
-<script>
-  const stars = document.querySelectorAll(".rating span");
-  const result = document.getElementById("selected-rating");
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
 
-  stars.forEach((star, i) => {
-    star.addEventListener("click", () => {
-      stars.forEach(s => s.classList.remove("active"));
-      for (let j = 0; j <= i; j++) {
-        stars[j].classList.add("active");
-      } 
-      result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
-      stars[i].style.color = "orange";
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
