@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunter x Hunter - Anime Zone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating span:hover,
+    .rating span:hover ~ span {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l'accueil</a>
+  <section id="hunterxhunter">
+    <h2>Hunter × Hunter</h2>
+    <p><strong>Auteur :</strong> Yoshihiro Togashi</p>
+    <p><strong>Genres :</strong> Action, Aventure, Drame, Fantastique, Shonen</p>
+    <p><strong>Statut :</strong> Anime terminé (2011),mais n'adapte pad tous les arcs du mangas, manga en pause</p>
+
+    <h3>Résumé</h3>
+    <p>
+      
+      Gon Freecss découvre que son père est un Hunter de renom. Il décide de devenir lui-même Hunter pour le retrouver. Sur sa route, il rencontre Killua, Kurapika et Leorio. Ensemble, ils vivent des aventures riches en dangers et en révélations.
+    </p>
+
+    <h3>Arcs Principaux</h3>
+    <ul>
+      <li>Examen de Hunter</li>
+      <li>Tour céleste</li>
+      <li>York Shin City</li>
+      <li>Greed Island</li>
+      <li>Chimera Ant</li>
+      <li>Élection du président</li>
+    </ul>
+
+    <h3>Personnages Principaux</h3>
+    <ul>
+      <li>Gon Freecss</li>
+      <li>Killua Zoldyck</li>
+      <li>Kurapika</li>
+      <li>Leorio</li>
+      <li>Hisoka</li>
+      <li>Meruem</li>
+    </ul>
+
+    <h3>Plateformes de Visionnage</h3>
+    <ul>
+      <li><a href="https://www.crunchyroll.com/fr/series/GY3VKX1MR/hunter-x-hunter" target="_blank">Crunchyroll</a></li>
+      <li><a href="https://www.netflix.com/title/70300472" target="_blank">Netflix</a></li>
+      <li><a href="https://www.justwatch.com/fr/serie/hunter-x-hunter" target="_blank">JustWatch</a></li>
+    </ul>
+
+    <h3>Notez cet anime :</h3>
+    <div class="rating" id="rating-hxh">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+      <p id="selected-rating-hxh"></p>
+    </div>
+  </section>
+
+  <script>
+    const stars = document.querySelectorAll("#rating-hxh .star");
+    const result = document.getElementById("selected-rating-hxh");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
