@@ -38,7 +38,22 @@ const animePages = {
   "to be hero x":
     "tobeherox.html",
   "food wars":
-    "foodwar.html"
+    "foodwar.html",
+  "death note":
+    "deathnote.html",
+  "naruto shippudden":
+    "narutoshippudden.html",
+  "danmachi":
+    "danmachi.html",
+  "spy family":
+    "spyfamily.html",
+  "gachiakuta":
+    "gachiakuta.html",
+  "solo leveling":
+    "sololeveling.html",
+  "hunter x hunter":
+  "hunterxhunter.html"
+  
 };
 
 function rechercherAnime() {
