@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>God of High School - Infos Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #222; padding: 20px; }
+    h1 { color: #e63946; }
+    ul { margin-top: 0; }
+    .rating .star {
+      font-size: 25px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating .star:hover,
+    .rating .star:hover ~ .star {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+<a href="Retour à l’accueil"></a>
+  <h1>God of High School</h1>
+  <p><strong>Genres :</strong> Action, Arts Martiaux, Fantastique, Shounen</p>
+  <p><strong>Synopsis :</strong> Des lycéens talentueux s'affrontent dans un tournoi de combat appelé "God of High School", où le vainqueur verra tous ses souhaits exaucés. Jin Mori, un expert en taekwondo, entre dans la compétition et découvre une conspiration bien plus grande.</p>
+  <p><strong>Année :</strong> 2020</p>
+  <p><strong>Episodes :</strong> 13</p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li><strong>Jin Mori</strong> – Protagoniste, spécialiste du taekwondo, énergique et optimiste.</li>
+    <li><strong>Han Daewi</strong> – Ami de Mori, expert en arts martiaux mixtes.</li>
+    <li><strong>Yoo Mira</strong> – Puissante combattante et amie proche de Mori et Daewi.</li>
+    <li><strong>Park Mujin</strong> – Organisateur du tournoi et personnage mystérieux.</li>
+  </ul>
+
+  <h2>Arcs majeurs</h2>
+  <ul>
+    <li><strong>Tournoi God of High School</strong> – Combat initial entre les participants.</li>
+    <li><strong>Conspiration et organisation secrète</strong> – Découverte des enjeux cachés derrière le tournoi.</li>
+  </ul>
+
+  <h3>Où regarder ?</h3>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/god-of-high-school" target="_blank">Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/title/81114588" target="_blank">Netflix</a></li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+
+                 star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "gold";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html> 
