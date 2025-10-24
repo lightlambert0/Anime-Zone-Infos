@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dragon Ball - Infos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .anime {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .anime img {
+      max-width: 200px;
+    }
+    .stars {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="anime">
+    <h2>Dragon Ball Z</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7b/Dragon_Ball_Z_Logo.png" alt="Dragon Ball Z">
+    <p><strong>Genre :</strong> Action, Arts martiaux, Shōnen</p>
+    <p><strong>Synopsis :</strong> Dragon Ball Z suit les aventures de Goku devenu adulte, alors qu'il protège la Terre contre de puissants ennemis comme les Saiyans, Freezer, Cell ou Majin Buu.</p>
+    <p><strong>Note :</strong>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> (5/5)
+    </p>
+    <p><a href="https://www.crunchyroll.com/fr/series/G8DHV7W6Y/dragon-ball-z" target="_blank">Voir sur Crunchyroll</a></p>
+  </div>
+
+  <div class="anime">
+    <h2>Dragon Ball Daima</h2>
+    <img src="https://staticg.sportskeeda.com/editor/2023/10/d168e-16977203714713-1920.jpg" alt="Dragon Ball Daima">
+    <p><strong>Genre :</strong> Action, Fantaisie, Aventure</p>
+    <p><strong>Synopsis :</strong> Dragon Ball Daima est une nouvelle série dans laquelle Goku et ses amis sont transformés en enfants. Ils doivent voyager à travers différents mondes pour retrouver leur forme d’origine. L’histoire est écrite par Akira Toriyama lui-même.</p>
+    <p><strong>Note :</strong>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> (4/5 - en cours)</p>
+    <p><a href="https://www.dragonballofficial.com" target="_blank">Voir le site officiel</a></p>
+  </div>
+<div class="rating">
+  <h3>Notez cet anime :</h3>
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <p id="selected-rating"></p>
+</div>
+
+<script>
+  const stars = document.querySelectorAll(".star");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = star.getAttribute("data-value");
+      result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+      stars.forEach(s => s.style.color = "#ccc");
+      for(let i=0; i < rating; i++){
+        stars[i].style.color = "orange";
+      }
+    });
+  });
+</script>
+
+<style>
+  .star {
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .star:hover,
+  .star:hover ~ .star {
+    color: orange;
+  }
+</style>
+</body>
+</html>
