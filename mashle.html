@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mashle - Infos Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; padding: 20px; }
+    h1 { color: #5a2a83; }
+    ul { margin-top: 0; }
+    a { color: #5a2a83; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .rating .star {
+      font-size: 25px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating .star:hover,
+    .rating .star:hover ~ .star {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+<a href="Retour à l'accueil"></a>
+  <h1>Mashle: Magic and Muscles</h1>
+  <p><strong>Genres :</strong> Action, Comédie, Fantastique</p>
+  <p><strong>Synopsis :</strong> Dans un monde où la magie est tout, Mash Burnedead est un jeune homme sans aucun pouvoir magique mais doté d'une force physique extraordinaire. Il doit survivre à l'académie de magie grâce à sa force brute et son ingéniosité.</p>
+  <p><strong>Année :</strong> 2023</p>
+  <p><strong>Episodes :</strong> En cours</p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li><strong>Mash Burnedead</strong> – Héros musclé sans magie mais au grand cœur.</li>
+    <li><strong>Dot Barrett</strong> – Ami fidèle et loyal de Mash.</li>
+    <li><strong>Parmar</strong> – Rival et membre influent de l'académie.</li>
+  </ul>
+
+  <h2>Arcs majeurs</h2>
+  <ul>
+    <li><strong>Entrée à l'académie</strong> – Mash découvre le monde magique et ses défis.</li>
+    <li><strong>Défis magiques</strong> – Mash affronte diverses épreuves avec sa force.</li>
+    <li><strong>Confrontations majeures</strong> – Combats contre les élèves puissants et ennemis.</li>
+  </ul>
+
+  <h3>Où regarder ?</h3>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/mashle" target="_blank">Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/title/mashle" target="_blank">Netflix</a></li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "gold";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
