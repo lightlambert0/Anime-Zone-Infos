@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dead Moon Deathplay - Infos Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #121212; color: #eee; padding: 20px; }
+    h1 { color: #d42f2f; }
+    a { color: #ff6666; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { margin-top: 0; }
+    .rating .star {
+      font-size: 25px;
+      cursor: pointer;
+      color: #555;
+    }
+    .rating .star:hover,
+    .rating .star:hover ~ .star {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+<a href="Retour à l’accueil"></a>
+  <h1>Dead Moon Deathplay</h1>
+  <p><strong>Genres :</strong> Action, Horreur, Fantastique, Suspense</p>
+  <p><strong>Synopsis :</strong> Dans un monde où les morts ne reposent jamais, une mystérieuse entité appelée "Dead Moon" chasse les âmes perdues. Un groupe de survivants tente de percer les secrets derrière ces phénomènes surnaturels tout en luttant pour leur survie.</p>
+  <p><strong>Année :</strong> 2024</p>
+  <p><strong>Episodes :</strong> À venir</p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li><strong>Kaito Sumeragi</strong> – Protagoniste déterminé à sauver ses amis.</li>
+    <li><strong>Yumi Takahashi</strong> – Experte en phénomènes occultes.</li>
+    <li><strong>Ryu Hayashi</strong> – Ancien soldat au passé trouble.</li>
+  </ul>
+
+  <h2>Arcs majeurs</h2>
+  <ul>
+    <li><strong>Apparition de la Dead Moon</strong> – Premiers signes du danger.</li>
+    <li><strong>Survie et révélations</strong> – Le groupe découvre l’origine des morts-vivants.</li>
+    <li><strong>Confrontation finale</strong> – Bataille pour stopper la malédiction.</li>
+  </ul>
+
+  <h3>Où regarder ?</h3>
+  <ul>
+    <li><a href="https://www.funimation.com/shows/dead-moon-deathplay" target="_blank">Funimation</a></li>
+    <li><a href="https://www.crunchyroll.com/dead-moon-deathplay" target="_blank">Crunchyroll</a></li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+        stars.forEach(s => s.style.color = "#555");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "gold";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
