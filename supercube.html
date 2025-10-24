@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Super Cube - Infos Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f0f0; color: #222; padding: 20px; }
+    h1 { color: #1a73e8; }
+    ul { margin-top: 0; }
+    .rating .star {
+      font-size: 25px;
+      cursor: pointer;
+      color: #ccc;
+    }
+    .rating .star:hover,
+    .rating .star:hover ~ .star {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Super Cube</h1>
+  <p><strong>Genres :</strong> Science-fiction, Mystère, Thriller</p>
+  <p><strong>Synopsis :</strong> Un cube mystérieux apparaît soudainement, bouleversant la vie de plusieurs personnes qui se retrouvent enfermées dans une situation énigmatique. Ils doivent résoudre les mystères et dangers pour survivre.</p>
+  <p><strong>Année :</strong> 2021</p>
+  <p><strong>Episodes :</strong> 12</p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li><strong>Alex</strong> – Leader courageux, cherche à comprendre l’origine du cube.</li>
+    <li><strong>Mia</strong> – Ingénieuse et pragmatique, apporte des solutions techniques.</li>
+
+    <li><strong>David</strong> – Cynique mais loyal, apporte un regard critique sur la situation.</li>
+  </ul>
+
+  <h2>Arcs majeurs</h2>
+  <ul>
+    <li><strong>L’apparition du cube</strong> – Découverte et premières réactions.</li>
+    <li><strong>La lutte pour la survie</strong> – Les personnages font face aux dangers du cube.</li>
+    <li><strong>Révélations finales</strong> – Origine et secret du cube dévoilés.</li>
+  </ul>
+
+  <h3>Où regarder ?</h3>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/super-cube" target="_blank">Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/title/super-cube" target="_blank">Netflix</a></li>
+  </ul>
+
+  <div class="rating">
+    <h3>Notez cet anime :</h3>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "gold";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
