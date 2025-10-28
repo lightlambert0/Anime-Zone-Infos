@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dead Mount Death Play - Fiche Anime</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+    }
+    .anime-info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #b30000;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l'accueil</a>
+    <div class="anime-info">
+    <h2>Dead Mount Death Play</h2>
+    <p><strong>Auteur :</strong> Ryohgo Narita</p>
+    <p><strong>Illustrateur :</strong> Shinta Fujimoto</p>
+    <p><strong>Genre :</strong> Action, Surnaturel, Mystère, Seinen</p>
+    <p><strong>Début du manga :</strong> 2017</p>
+    <p><strong>Statut :</strong> En cours</p>
+    <p><strong>Studio anime :</strong> Geek Toys</p>
+    <p><strong>Début de l’anime :</strong> Avril 2023</p>
+    <p><strong>Saisons :</strong> 2 parties</p>
+
+    <h3>Synopsis</h3>
+    <p>Un puissant nécromancien surnommé le “Dieu-Cadavre” se réincarne dans le corps d’un adolescent japonais après avoir été vaincu dans son monde d'origine. Dans le monde moderne, il tente de vivre paisiblement, mais est vite mêlé à des affaires de yakuza et d’assassins…</p>
+
+    <h3>Personnages principaux</h3>
+    <ul>
+      <li>Polka Shinoyama</li>
+      <li>Misaki Sakimiya</li>
+      <li>Takarada</li>
+      <li>Clarissa</li>
+      <li>Takumi</li>
+    </ul>
+
+    <h3>Arcs principaux</h3>
+    <ul>
+      <li>Réincarnation et rencontre avec Misaki</li>
+      <li>Immersion dans le monde criminel</li>
+      <li>Conflits surnaturels</li>
+      <li>Enquête sur le corps de Polka original</li>
+    </ul>
+
+    <div class="rating">
+    <h4>Notez cet anime :</h4>
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+    </div>
+
+<script>
+  const stars = document.querySelectorAll(".rating span");
+  const result = document.getElementById("selected-rating");
+
+  stars.forEach((star, i) => {
+    star.addEventListener("click", () => {
+      stars.forEach(s => s.classList.remove("active"));
+      for (let j = 0; j <= i; j++) {
+        stars[j].classList.add("active");
+      } 
+
+      result.textContent = `Merci ! Vous avez donné une note de ${i + 1} étoile(s).`;
+    });
+  });
+</script>
+
+</body>
+</html>
