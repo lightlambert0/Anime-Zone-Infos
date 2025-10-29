@@ -97,7 +97,7 @@
         const rating = star.getAttribute("data-value");
         result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
 
-        stars.forEach(s => s.style.color = "#fff");
+        stars.forEach(s => s.style.color = "#ffffff");
         for (let i = 0; i < rating; i++) {
           stars[i].style.color = "orange";
         }
