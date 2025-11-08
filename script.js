@@ -59,7 +59,7 @@ const animePages = {
   "deadmountdeathplay.html",
   "blue exorcist":
    "blueexorcist.html",
-  "god of high school",
+  "god of high school":
   "godofhighschool.html"
   
 };
