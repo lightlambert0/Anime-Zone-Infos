@@ -52,7 +52,15 @@ const animePages = {
   "solo leveling":
     "sololeveling.html",
   "hunter x hunter":
-  "hunterxhunter.html"
+  "hunterxhunter.html",
+  "dragon ball":
+    "dragonballz.html",
+  "dead mount death play":
+  "deadmountdeathplay.html",
+  "blue exorcist":
+   "blueexorcist.html",
+  "god of high school",
+  "godofhighschool.html"
   
 };
 
