@@ -54,7 +54,7 @@ const animePages = {
   "hunter x hunter":
   "hunterxhunter.html",
   "dragon ball":
-    "dragonballz.html",
+    "dragonball.html",
   "dead mount death play":
   "deadmountdeathplay.html",
   "blue exorcist":
