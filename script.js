@@ -60,7 +60,9 @@ const animePages = {
   "blue exorcist":
    "blueexorcist.html",
   "god of high school":
-  "godofhighschool.html"
+  "godofhighschool.html",
+  "super cube":
+    "supercube.html"
   
 };
 
