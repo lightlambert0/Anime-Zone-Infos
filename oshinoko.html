@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oshi no Ko - Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; padding: 20px; }
+    h1 { color: #d60087; }
+    .section { margin-bottom: 25px; }
+    .stars { color: gold; }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<a href="index.html">Retour à l'accueil</a>
+  <h1>⭐ Oshi no Ko ⭐</h1>
+
+  <div class="section">
+    <h2>Résumé</h2>
+    <p>
+      Oshi no Ko suit l’histoire d’un médecin fan d’une idole, Ai Hoshino. Lorsqu'il meurt et se réincarne en tant que fils de son idole préférée, sa nouvelle vie devient un mélange de drame, d’amour, de secrets et de vengeance dans le monde cruel du show-business japonais.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Informations Générales</h2>
+    <ul>
+      <li><strong>Genres :</strong> Drame, Mystère, Idols, Reincarnation</li>
+      <li><strong>Studio :</strong> Doga Kobo</li>
+      <li><strong>Auteur :</strong> Aka Akasaka (scénario), Mengo Yokoyari (dessins)</li>
+      <li><strong>Date de sortie :</strong> 2023</li>
+      <li><strong>Statut :</strong> En cours</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Personnages Principaux</h2>
+    <ul>
+      <li>Ai Hoshino ⭐⭐⭐⭐⭐</li>
+      <li>Aqua Hoshino (Gorou Amemiya) ⭐⭐⭐⭐☆</li>
+      <li>Ruby Hoshino ⭐⭐⭐⭐☆</li>
+      <li>Kana Arima ⭐⭐⭐⭐☆</li>
+      <li>Akane Kurokawa ⭐⭐⭐⭐☆</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Arcs Principaux</h2>
+    <ul>
+      <li>Arc de l’Idole et la naissance</li>
+      <li>Arc du lycée et de la vengeance</li>
+      <li>Arc de la télé-réalité</li>
+      <li>Arc du film</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Note Globale</h2>
+    <p class="stars">⭐⭐⭐⭐⭐ (4.8 / 5)</p>
+  </div>
+
+  <div class="section">
+    <h2>Regarder l’anime</h2>
+    <ul>
+      <li><a href="https://www.crunchyroll.com/fr/series/GVDHX8QNW/oshi-no-ko" target="_blank">🎥 Crunchyroll</a></li>
+      <li><a href="https://www.netflix.com/search?q=Oshi%20no%20Ko" target="_blank">🎬 Netflix (si disponible)</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Groupes Telegram</h2>
+    <ul>
+      <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+      <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li></ul></div>
+      <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
