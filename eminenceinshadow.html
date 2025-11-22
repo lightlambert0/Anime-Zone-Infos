@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>The Eminence in Shadow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #8e44ad;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #c0392b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l’accueil</a>
+    <h1>The Eminence in Shadow</h1>
+
+  <p><strong>Résumé :</strong><br>
+    Cid Kagenou a toujours rêvé d’opérer dans l’ombre, en secret, tout en prétendant être un simple figurant. Après sa mort dans notre monde, il renaît dans un monde fantastique où il fonde "Shadow Garden", un groupe secret censé combattre une organisation maléfique... qui s’avère réelle sans qu’il le sache !
+  </p>
+
+  <h2>Fiche technique</h2>
+  <ul>
+    <li><strong>Date de sortie :</strong> 2022</li>
+    <li><strong>Statut :</strong> 2 saisons (en cours)</li>
+    <li><strong>Genres :</strong> Action, Isekai, Comédie, Fantasy</li>
+    <li><strong>Studio :</strong> Nexus</li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Cid Kagenou / Shadow</li>
+    <li>Alpha</li>
+    <li>Beta</li>
+    <li>Gamma</li>
+    <li>Delta</li>
+    <li>Epsilon</li>
+    <li>Alexia Midgar</li>
+    <li>Rose Oriana</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li>Arc de l’académie Midgar</li>
+    <li>Arc de l’enlèvement d’Alexia</li>
+    <li>Arc de la guerre contre le culte de Diablos</li>
+    <li>Arc du tournoi de la ville sainte</li>
+    <li>Arc de Lawless City</li>
+  </ul>
+
+  <h2>Regarder l’anime</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GVDHX8QXY/the-eminence-in-shadow" target="_blank">🎥 Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=Eminence%20in%20Shadow" target="_blank">🎬 Netflix (si disponible)</a></li>
+  </ul>
+
+  <h2>Groupes Telegram</h2>
+  <ul>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+  </ul>
+  <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
