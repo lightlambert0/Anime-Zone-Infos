@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Wind Breaker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #27ae60;
+    }
+    h2 {
+      color: #2980b9;
+      margin-top: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #c0392b;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l’accueil</a>
+    <h1>Wind Breaker</h1>
+
+  <p><strong>Résumé :</strong><br>
+    Haruka Sakura, un lycéen solitaire et passionné de combat, entre à Furin High School, connue pour ses délinquants. Contrairement à ses attentes, l’école s'est transformée en un groupe de défense appelé "Bofurin", protégeant la ville. Il devra choisir entre sa volonté de se battre et la voie de la justice qu'on lui propose.
+  </p>
+
+  <h2>Fiche technique</h2>
+  <ul>
+    <li><strong>Date de sortie :</strong> 2024</li>
+    <li><strong>Statut :</strong> En cours</li>
+    <li><strong>Genres :</strong> Action, Combat, Tranche de vie</li>
+    <li><strong>Studio :</strong> CloverWorks</li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Haruka Sakura</li>
+    <li>Kyotaro Sugishita</li>
+    <li>Umemiya Hajime</li>
+    <li>Toma Hiragi</li>
+    <li>Choji Tomiyama</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li>Arc d’introduction à Furin</li>
+    <li>Arc du test d’admission</li>
+    <li>Arc du clan rival</li>
+    <li>Arc de la formation Bofurin</li>
+  </ul>
+
+  <h2>Regarder l’anime</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GDKHZEJ51" target="_blank">🎥 Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=Wind%20Breaker" target="_blank">🎬 Netflix (si disponible)</a></li>
+  </ul>
+
+  <h2>Groupes Telegram</h2>
+  <ul>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+  </ul>
+
+  <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
