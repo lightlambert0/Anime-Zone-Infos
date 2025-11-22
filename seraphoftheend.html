@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Seraph of the End</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #cc0000;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #444;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<a href="index.html">Retour à l’accueil</a>
+  <h1>Seraph of the End</h1>
+
+  <p><strong>Résumé :</strong>  
+    Dans un monde ravagé par un virus mystérieux ayant décimé la majorité des adultes, les enfants survivants sont réduits en esclavage par des vampires. Yuuichirou Hyakuya, un jeune garçon, rêve de vengeance après avoir vu sa "famille" adoptive massacrée. Il rejoint l’armée démoniaque impériale japonaise pour éradiquer les vampires et découvrir la vérité sur le Seraph de la fin, une arme secrète liée à son destin.
+  </p>
+
+  <h2>Fiche technique</h2>
+  <ul><li><strong>Date de sortie :</strong> 2015</li>
+    <li><strong>Statut :</strong> En attente d'une suite</li>
+    <li><strong>Genres :</strong> Action, Drame, Fantastique, Surnaturel</li>
+    <li><strong>Studio :</strong> Wit Studio</li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Yuuichirou Hyakuya</li>
+    <li>Mikaela Hyakuya</li>
+    <li>Shinoa Hiragi</li>
+    <li>Guren Ichinose</li>
+    <li>Ferid Bathory</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li>Arc de l’évasion de l’orphelinat</li>
+    <li>Arc de l’entraînement dans l’armée</li>
+    <li>Arc des combats humains vs vampires</li>
+    <li>Arc du Seraph de la fin</li>
+  </ul>
+
+  <h2>Regarder l’anime</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GYWE7WQ1Y/seraph-of-the-end" target="_blank">🎥 Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=Seraph%20of%20the%20End" target="_blank">🎬 Netflix (si disponible)</a></li>
+  </ul>
+
+  <h2>Groupes Telegram</h2>
+  <ul>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+  </ul>
+  <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
