@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tatoeba Last Dungeon</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #222;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #2b7a78;
+    }
+    h2 {
+      color: #17252a;
+      margin-top: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #3aafa9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<a href="index.html">Retour à l’accueil</a>
+  <h1>Tatoeba Last Dungeon</h1>
+
+  <p><strong>Résumé :</strong>  
+    Lloyd est un jeune garçon humble vivant dans un village situé près du donjon le plus dangereux du royaume. Pensant être faible, il part pour la capitale afin de devenir soldat. Cependant, ce qu’il ignore, c’est qu’il est en réalité incroyablement puissant comparé aux standards du monde extérieur ! Une comédie pleine de magie, de malentendus et de super-pouvoirs inattendus.
+  </p>
+
+  <h2>Fiche technique</h2>
+  <ul>
+   <li><strong>Date de sortie :</strong> 2021</li>
+    <li><strong>Statut :</strong> Terminé</li>
+    <li><strong>Genres :</strong> Fantaisie, Comédie, Action</li>
+    <li><strong>Studio :</strong> Lidenfilms</li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Lloyd Belladonna</li>
+    <li>Marie</li>
+    <li>Selen Hemein</li>
+    <li>Riho Flavin</li>
+    <li>Alka</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li>Arrivée de Lloyd à la capitale</li>
+    <li>Examens d'entrée dans l’armée</li>
+    <li>Conflits magiques en ville</li>
+    <li>Révélations sur le village natal</li>
+  </ul>
+
+  <h2>Regarder l’anime</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GY190DKNR/tatoeba-last-dungeon" target="_blank">🎥 Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=Tatoeba%20Last%20Dungeon" target="_blank">🎬 Netflix (si disponible)</a></li>
+  </ul>
+
+  <h2>Groupes Telegram</h2>
+  <ul>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+  </ul>
+ <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script> 
+</body>
+</html>
+ 
