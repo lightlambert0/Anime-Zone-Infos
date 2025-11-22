@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>86 - Eighty Six</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    h2 {
+      color: #8e44ad;
+      margin-top: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #e74c3c;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l’accueil</a>
+    <h1>86 - Eighty Six</h1>
+
+  <p><strong>Résumé :</strong><br>
+    Dans la République de San Magnolia, la guerre contre les drones autonomes de l’Empire Giadian fait rage. Officiellement, aucun soldat ne combat, mais en réalité, les jeunes du district 86, exclus de la société, sont envoyés sur le front. L’histoire suit Lena, une commandante de l’armée républicaine, et Shin, le leader d’un escadron 86, dans leur combat désespéré pour la liberté.
+  </p>
+
+  <h2>Fiche technique</h2>
+  <ul>
+    <li><strong>Date de sortie :</strong> 2021</li>
+    <li><strong>Statut :</strong> Terminé (2 parties)</li>
+    <li><strong>Genres :</strong> Drame, Guerre, Science-fiction, Action</li>
+    <li><strong>Studio :</strong> A-1 Pictures</li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Shinei "Shin" Nouzen</li>
+    <li>Vladilena "Lena" Milizé</li>
+    <li>Raiden Shuga</li>
+    <li>Anju Emma</li>
+    <li>Theoto Rikka</li>
+    <li>Kurena Kukumila</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li>Arc du district 86</li>
+    <li>Arc du Peloton Spearhead</li>
+    <li>Arc de la Fédération Giadienne</li>
+    <li>Arc de la rébellion contre l’Empire</li>
+  </ul>
+
+  <h2>Regarder l’anime</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GVDHX8Q8Y/86-eighty-six" target="_blank">🎥 Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=86%20Eighty-Six" target="_blank">🎬 Netflix (si disponible)</a></li>
+  </ul>
+
+  <h2>Groupes Telegram</h2>
+  <ul>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+  </ul>
+<div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
