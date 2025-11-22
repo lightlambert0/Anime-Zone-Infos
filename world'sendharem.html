@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>World's End Harem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #c0392b;
+    }
+    h2 {
+      color: #8e44ad;
+      margin-top: 30px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">Retour à l'accueil</a>
+    <h1>World's End Harem</h1>
+
+  <p><strong>Résumé :</strong><br>
+    Dans un futur proche, un virus mortel a éradiqué 99,9 % des hommes. Reito Mizuhara, cryogénisé pendant 5 ans, se réveille pour découvrir qu’il fait partie des rares survivants masculins. On lui demande de « repeupler » le monde avec de nombreuses femmes. Cependant, Reito a un objectif : retrouver Elisa, la fille qu’il aime, disparue mystérieusement...
+  </p>
+
+  <h2>Fiche technique</h2>
+  <ul>
+    <li><strong>Date de sortie :</strong> 2022</li>
+    <li><strong>Statut :</strong> 1 saison</li>
+    <li><strong>Genres :</strong> Science-fiction, Ecchi, Drame</li>
+    <li><strong>Studio :</strong> Studio Gokumi × AXsiZ</li>
+  </ul>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li>Reito Mizuhara</li>
+    <li>Mira Suou</li>
+    <li>Elisa Tachibana</li>
+    <li>Kyouji Hino</li>
+    <li>Shouta Doi</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li>Arc du réveil de Reito</li>
+    <li>Arc de la recherche d'Elisa</li>
+    <li>Arc des autres survivants masculins</li>
+    <li>Arc de la vérité sur le MK Virus</li>
+  </ul>
+
+  <h2>Regarder l’anime</h2>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fr/series/GYEXQKJG6/worlds-end-harem" target="_blank">🎥 Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/search?q=World%27s%20End%20Harem" target="_blank">🎬 Netflix (si dispo)</a></li>
+  </ul>
+
+  <h2>Groupes Telegram</h2>
+  <ul>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+  </ul>
+  
+<div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
