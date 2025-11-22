@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grimoire of Zero - Fiche Anime</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fefefe; color: #222; padding: 20px; }
+    h1 { color: #5a00a0; }
+    .section { margin-bottom: 25px; }
+    a { color: #0077cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+   <a href="index.html">Retour à l’accueil</a>
+  <h1>Grimoire of Zero</h1>
+
+  <div class="section">
+    <h2>Résumé</h2>
+    <p>
+      Dans un monde où la magie est redoutée, un mercenaire mi-homme, mi-bête, croise la route de Zero, une sorcière puissante. Ensemble, ils partent à la recherche d’un livre magique, le "Grimoire of Zero", capable de changer le destin du monde.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Informations Générales</h2>
+    <ul>
+      <li><strong>Genres :</strong> Action, Fantaisie, Aventure, Magie</li>
+      <li><strong>Studio :</strong> White Fox</li>
+      <li><strong>Auteur :</strong> Kakeru Kobashiri</li>
+      <li><strong>Date de sortie :</strong> 2017</li>
+      <li><strong>Statut :</strong> Terminé</li>
+      </ul>
+  </div>
+
+  <div class="section">
+    <h2>Personnages Principaux</h2>
+    <ul>
+      <li>Zero</li>
+      <li>Le mercenaire (Youhei)</li>
+      <li>Albus</li>
+      <li>Thirteen</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Arcs Principaux</h2>
+    <ul>
+      <li>Arc du Grimoire</li>
+      <li>Arc des sorciers traqués</li>
+      <li>Arc du conflit magique</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Regarder l’anime</h2>
+    <ul>
+      <li><a href="https://www.crunchyroll.com/fr/series/GYEXQ4K3R/grimoire-of-zero" target="_blank">🎥 Crunchyroll</a></li>
+      <li><a href="https://www.netflix.com/search?q=Grimoire%20of%20Zero" target="_blank">🎬 Netflix (si dispo)</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Groupes Telegram</h2>
+    <ul>
+      <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank">📚 Manga FR</a></li>
+      <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank">📺 Anime FR</a></li>
+    </ul>
+  </div>
+<div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
