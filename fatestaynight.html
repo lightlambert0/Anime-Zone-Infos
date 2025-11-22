@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fate/stay night - Dossier Anime</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 20px auto;
+    background: #f9f9f9;
+    color: #333;
+  }
+  .anime-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .anime-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  h1, h2, h3 {
+    color: #2c3e50;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    margin-bottom: 5px;
+  }
+  .stars {
+    color: #f39c12;
+    font-size: 1.2em;
+  }
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <a href="index.html">Retour à l'accueil</a>
+<div class="anime-card">
+  <h1>Fate/stay night</h1>
+  
+  <h2>Informations générales</h2>
+  <p><strong>Genre :</strong> Action, Fantastique, Drame, Romance</p>
+  <p><strong>Année :</strong> 2006 (première série animée)</p>
+  
+  <p><strong>Synopsis :</strong> La guerre du Saint Graal est un combat secret où sept mages invoquent chacun un héros légendaire pour s'affronter. Shirou Emiya, un jeune lycéen, se retrouve impliqué dans cette bataille mortelle où la survie et les désirs de chacun s’entremêlent.</p>
+
+  <h2>Personnages principaux</h2>
+  <ul>
+    <li><strong>Shirou Emiya :</strong> Protagoniste principal, un jeune mage avec un fort sens de la justice.</li>
+    <li><strong>Saber :</strong> Servant de Shirou, héroïne légendaire noble et puissante.</li>
+    <li><strong>Rin Tohsaka :</strong> Mage talentueuse et l’un des participants à la Guerre du Saint Graal.</li>
+    <li><strong>Archer :</strong> Servant de Rin, expert en archery et tacticien.</li>
+    <li><strong>Illyasviel von Einzbern :</strong> Mage puissante, participe aussi à la guerre.</li>
+  </ul>
+
+  <h2>Arcs principaux</h2>
+  <ul>
+    <li><strong>Fate :</strong> L’arc centré sur la relation entre Shirou et Saber.</li>
+    <li><strong>Unlimited Blade Works :</strong> Arc explorant le conflit entre Shirou et Archer.</li>
+    <li><strong>Heaven’s Feel :</strong> Arc sombre se concentrant sur Illyasviel et les vérités cachées de la guerre.</li>
+  </ul>
+  <h3>Où regarder?</h3>
+  <ul>
+    <li><a href="https://www.crunchyroll.com/fate-stay-night" target="_blank" rel="noopener noreferrer">Crunchyroll</a></li>
+    <li><a href="https://www.netflix.com/title/70300800" target="_blank" rel="noopener noreferrer">Netflix</a></li>
+    <li><a href="https://t.me/CrunchyrollMangaFR" target="_blank" rel="noopener noreferrer">Telegram - Crunchyroll Manga FR</a></li>
+    <li><a href="https://t.me/CrunchyrollAnimeFR" target="_blank" rel="noopener noreferrer">Telegram - Crunchyroll Anime FR</a></li>
+  </ul>
+  </ul>
+
+  <p><strong>Plus d’infos :</strong> <a href="https://myanimelist.net/anime/232/Fate_stay_night" target="_blank" rel="noopener noreferrer">Voir sur MyAnimeList</a></p>
+
+
+  <div class="rating">
+    <h2>Notez cet anime :</h2>
+    <span class="star" data-value="1">&#9733;</span>
+    <span class="star" data-value="2">&#9733;</span>
+    <span class="star" data-value="3">&#9733;</span>
+    <span class="star" data-value="4">&#9733;</span>
+    <span class="star" data-value="5">&#9733;</span>
+    <p id="selected-rating"></p>
+  </div>
+  <script>
+    const stars = document.querySelectorAll(".star");
+    const result = document.getElementById("selected-rating");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        const rating = star.getAttribute("data-value");
+        result.textContent = `Merci ! Vous avez donné une note de ${rating} étoile(s).`;
+
+        stars.forEach(s => s.style.color = "#ccc");
+        for (let i = 0; i < rating; i++) {
+          stars[i].style.color = "orange";
+        }
+      });
+    });
+  </script>
+</div>
+</body>
+</html>
