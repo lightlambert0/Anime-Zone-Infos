@@ -62,7 +62,30 @@ const animePages = {
   "god of high school":
   "godofhighschool.html",
   "super cube":
-    "supercube.html"
+    "supercube.html",
+  "fate stay night":
+    "fatestaynight.html",
+  "oshi no ko":
+  "oshinoko.html",
+  "grimoire of zero":
+    "grimoireofzero.html",
+  "seraph of the end":
+    "seraphoftheend.html",
+  "tatoeba last dungeon":
+    "tatoebalastdungeon.html",
+  "vanitas no carte":
+"vanitasnocarte.html",
+  "world's end harem":
+    "world'sendharem.html",
+  "blassreiter":
+    "blassreiter.html",
+  "wind breaker":
+    "wind breaker.html",
+  "eighty-six":
+    "eighty-six.html",
+  "eminence in shadow":
+    "eminenceinshadow.html"
+  
   
 };
 
