@@ -80,7 +80,7 @@ const animePages = {
   "blassreiter":
     "blassreiter.html",
   "wind breaker":
-    "wind breaker.html",
+    "windbreaker.html",
   "eighty six":
     "eighty-six.html",
   "eminence in shadow":
