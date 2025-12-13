@@ -4,11 +4,12 @@ body{
 }
 a {
  color: orange;
- text-decoration: underline;
+ text-decoration: none;
  transition: color 0.3s ease;
 }
 a:hover {
-  color: #ff9900;
+  color: #00ccff;
+  text-decoration: underline;  
 }
 .search-container {
   display: flex;
