@@ -8,8 +8,9 @@ a {
  transition: color 0.3s ease;
 }
 a:hover {
-  color: #00ff66;
-  text-decoration: underline;  
+  color:#00ff66;
+  text-decoration: underline;
+  text-shadow: 0 0 8px #32cd32;
 }
 .search-container {
   display: flex;
