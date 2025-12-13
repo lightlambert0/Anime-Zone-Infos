@@ -57,6 +57,7 @@ a {
 }
 .anime-card img{
   width: 100%;
+  ransition: transform 0.3s ease-in-out;
   border-radius: 8px;
 }
 
@@ -64,6 +65,10 @@ a {
   color: orange;
   text-decoration:none;
 }
+.anime-card:hover img {
+  transform: scale(1.1);
+}
+
 
   
   
