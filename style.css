@@ -5,6 +5,10 @@ body{
 a {
  color: orange;
  text-decoration: underline;
+ transition: color 0.3s ease;
+}
+a:hover {
+  color: #ff9900;
 }
 .search-container {
   display: flex;
@@ -57,7 +61,7 @@ a {
 }
 .anime-card img{
   width: 100%;
-  ransition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   border-radius: 8px;
 }
 
