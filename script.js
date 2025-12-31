@@ -114,6 +114,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("searchButton").addEventListener("click", rechercherAnime);
 });
+
+
+// 🎉 Confettis qui tombent
+window.addEventListener('load', () => {
+  const container = document.createElement('div');
+  container.id = 'confetti-container';
+  document.body.appendChild(container);
+
 const container = document.getElementById('sparkle-container');
 for(let i = 0; i < 50; i++) {
   const s = document.createElement('span');
@@ -122,5 +130,6 @@ for(let i = 0; i < 50; i++) {
   s.style.animationDelay = ${Math.random() * 2}s;
   container.appendChild(s);
 }
+});
 
 
