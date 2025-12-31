@@ -400,6 +400,25 @@ href="mentions-legales.html">Pour tout savoir sur la politique de confidentialit
    </footer>
    <script type="text/javascript"
 src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = () => {
+    const duration = 5 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 3,
+        angle: 90,
+        spread: 360,
+        origin: { y: 0 }
+      });
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  };
+</script>
 </body>
 </html>
   
