@@ -115,14 +115,3 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("searchButton").addEventListener("click", rechercherAnime);
 });
 
-function launchSparkles() {
-const container = document.getElementById('sparkle-container');
-for(let i = 0; i < 50; i++) {
-  const s = document.createElement('span');
-  s.style.left = `Math.random() * 100
-  s.style.top = {Math.random() * 100 + 50}px;
-  s.style.animationDelay = ${Math.random() * 2}s;
-  container.appendChild(s);
-}
-}
-
