@@ -63,21 +63,25 @@ footer{
       }  
 }
      
-    .year {
+.year-animated {
+  display: inline-block;
   font-size: 2rem;
-  font-weight: 600;
-  color: #00d1ff; /* bleu clair */
-  margin-left: 10px;
-  position: relative;
-  top: -5px;
+  font-weight: 700;
+  color: #00d1ff;
   font-style: italic;
-  text-shadow: 0 0 5px #00d1ff;
-  transition: color 0.3s ease;
+  animation: wave 2s ease-in-out infinite;
 }
 
-.year:hover {
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.year-animated:hover {
   color: #ff3c78;
-  text-shadow: 0 0 10px #ff3c78;
   cursor: pointer;
 } 
 </style>
@@ -90,7 +94,7 @@ footer{
     <div class="new-year-message">🎉 Bonne Année 2026 ! 🎉<br>
     Que cette année soit remplie de réussite, de passion et de bonheur !</div>
   </div>    
-<h1>🇯🇵Anime Zone <span class="year">2026</span></h1> 
+<h1>🇯🇵Anime Zone <span class="year-animated">2026</span></h1> 
 <div class="sparkles" id="sparkle-container"></div>
 <div class="search-container">
 <i class="fas fa-search
