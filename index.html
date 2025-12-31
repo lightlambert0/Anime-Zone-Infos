@@ -400,22 +400,19 @@ href="mentions-legales.html">Pour tout savoir sur la politique de confidentialit
    </footer>
    <script type="text/javascript"
 src="script.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Anime Zone",
-  "url": "https://lightlambert0.github.io",
-  "description": "Anime Zone est un projet personnel créé par un passionné d'animes. Il propose des fiches détaillées sur les personnages, arcs, notes, et liens de visionnage.",
-  "author": {
-    "@type": "Person",
-    "name": "Lambert Light",
-"description":"Je suis passionné par les animés depuis des années. J'ai créé Anime Zone pour rassembler les fans autour d'une plateforme simple, gratuite et bien organisée. 
-  Ce projet est né d'une envie personnelle de partager ma passion et de faciliter l'accès aux informations sur les animés, les personnages et leurs univers.C'est un projet personnel, mais aussi une manière d'apprendre, de créer, et peut-être un jour de le transformer en une plateforme plus professionnelle."
-  }
- 
-}
-</script>
+ <!-- Script confettis -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    // Animation de confettis au chargement
+    window.onload = () => {
+      confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#ff0', '#0f0', '#0ff', '#f0f', '#f00']
+      });
+    };
+  </script>
 </body>
 </html>
   
