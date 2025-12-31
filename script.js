@@ -114,4 +114,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("searchButton").addEventListener("click", rechercherAnime);
 });
+<canvas id="confetti"></canvas>
+  const canvas = document.getElementById('confetti');
+  const ctx = canvas.getContext('2d');
+  let W = window.innerWidth;
+  let H = window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+
+  const confettiCount = 150;
+  const confetti = [];
+
+  const colors = ['#ff0a54', '#ff477e', '#ff85a1', '#fbb1b1', '#f9bec7'];
+
+  function randomRange(min, max) {
+ return Math.random() * (max - min) + min;
+  }
+
+  function Confetti() {
+    this.x = Math.random() * W;
+    this.y = Math.random() * H - H;
+    this.r = randomRange(5, 10);
+    this.d = (Math.random() * confettiCount) + 10;
+    this.color = colors[Math.floor(Math.random() * colors.length)];
+    this.tilt = randomRange(-10, 10);
+    this.tiltAngleIncremental = randomRange(0.05, 0.12);
+    this.tiltAngle = 0;
+
+    this.draw = function() {
+      ctx.beginPath();
+      ctx.lineWidth = this.r / 2;
+      ctx.strokeStyle = this.color;
+      ctx.moveTo(this.x + this.tilt + this.r / 4, this.y);
+      ctx.lineTo(this.x + this.tilt, this.y + this.tilt + this.r / 4);
+      ctx.stroke();
+    };
+  }
+
+  function initConfetti() {
+    for(let i=0; i < confettiCount; i++) {
+      confetti.push(new Confetti());
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for(let i=0; i < confettiCount; i++) {
+      confetti[i].draw();
+    }
+    update();
+  }
+
+  let angle = 0;
+
+  function update() {
+    angle += 0.01;
+    for(let i=0; i < confettiCount; i++) {
+      let c = confetti[i];
+      c.tiltAngle += c.tiltAngleIncremental;
+      c.y += (Math.cos(angle + c.d) + 3 + c.r / 2) / 2;
+      c.x += Math.sin(angle);
+      c.tilt = Math.sin(c.tiltAngle) * 15;
+
+      if(c.y > H) {
+        confetti[i] = new Confetti();
+        confetti[i].x = Math.random() * W;
+        confetti[i].y = -10;
+      }
+    }
+  }
+
+  window.addEventListener('resize', () => {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W;
+    canvas.height = H;
+  });
+
+  initConfetti();
+  setInterval(draw, 20);
 
